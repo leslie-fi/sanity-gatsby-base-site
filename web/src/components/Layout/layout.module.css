@@ -1,0 +1,34 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.root {
+  /* padding: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  @media (--media-min-xxlarge) {
+    padding: 0;
+  } */
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  @media (--media-min-large) {
+    margin-top: 106px;
+  }
+}
+
+.skipLink {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 10px 15px;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skipLink:focus {
+  top: 0;
+  z-index: 1000;
+}

@@ -1,0 +1,251 @@
+@import '../../styles/custom-media.css';
+
+.HomeHeroWrapper {
+  width: 100%;
+  background-color: #b8d632;
+  @nest & .HomeHeroInnerWrapper {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    height: 310px;
+    @media (--media-min-xsmall) {
+      height: 380px;
+    }
+    @media (--media-min-medium) {
+      height: 490px;
+    }
+  }
+  @nest & .HeroBG {
+    width: 100%;
+    height: 100%;
+    @media (--media-min-medium) {
+      /* height: auto; */
+    }
+  }
+  @nest & .HeroTitle {
+    display: block;
+    position: absolute !important;
+    top: -170px;
+    right: auto;
+    left: -140px;
+    width: 325px;
+    z-index: 1;
+    /* height: 330px; */
+    /* width: calc(100% - 185px); */
+
+
+    opacity: 0;
+    animation-name: slideDownfromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    @media (--media-min-xsmall) {
+      /* width: 326px; */
+      top: -270px;
+      right: auto;
+      left: -192px;
+      width: 520px;
+    }
+    @media (--media-min-medium) {
+      top: -330px;
+      right: auto;
+      left: -250px;
+      width: 620px;
+    }
+    @media (--media-min-large) {
+      top: -333px;
+      right: auto;
+      left: -270px;
+      width: 637px;
+    }
+    @media (--media-min-xlarge) {
+      top: -485px;
+      right: auto;
+      left: -336px;
+      width: 885px;
+    }
+    @media (--media-min-xxlarge) {
+      top: -518px;
+      right: auto;
+      left: -335px;
+      width: 950px;
+    }
+  }
+  @nest & .FirstAnimatedGraphic {
+      display: block;
+      position: absolute !important;
+      top: -8px;
+      right: 0px;
+      left: auto;
+      z-index: 1;
+      height: 140px;
+      width: 140px;
+
+      opacity: 0;
+      animation-name: slideDown;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-delay: .4s;
+      animation-fill-mode: forwards;
+
+    @media (--media-min-medium) {
+      height: 250px;
+      width: 250px;
+    }
+    @media (--media-min-large) {
+      top: -23px;
+      right: 305px;
+      left: auto;
+    }
+    @media (--media-min-xlarge) {
+      z-index: 1;
+      height: 280px;
+      width: 280px;
+    }
+    @media (--media-min-xxlarge) {
+      right: 424px;
+      height: 320px;
+      width: 320px;
+    }
+  }
+  @nest & .SecondAnimatedGraphic {
+    display: block;
+    position: absolute !important;
+    bottom: -4px;
+    right: auto;
+    left: -12px;
+    z-index: 1;
+    height: 140px;
+    width: 140px;
+
+    opacity: 0;
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+    @media (--media-min-medium) {
+      height: 250px;
+      width: 250px;
+    }
+    @media (--media-min-large) {
+      top: -8px;
+      right: 0;
+      left: auto;
+    }
+    @media (--media-min-xlarge) {
+      display: block;
+      position: absolute !important;
+      z-index: 1;
+      height: 280px;
+      width: 280px;
+    }
+    @media (--media-min-xxlarge) {
+      height: 320px;
+      width: 320px;
+    }
+  }
+  @nest & .ThirdAnimatedGraphic {
+    display: block;
+    position: absolute !important;
+    bottom: -24px;
+    left: auto;
+    right: 0px;
+    z-index: 1;
+    height: 140px;
+    width: 140px;
+
+    opacity: 0;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    @media (--media-min-medium) {
+      height: 250px;
+      width: 250px;
+    }
+    @media (--media-min-large) {
+      right: 192px;
+      left: auto;
+      z-index: 1;
+      bottom: -24px;
+    }
+    @media (--media-min-xlarge) {
+      display: block;
+      position: absolute !important;
+      height: 280px;
+      width: 280px;
+    }
+    @media (--media-min-xxlarge) {
+      height: 320px;
+      width: 320px;
+      right: 210px;
+      bottom: -64px;
+    }
+  }
+}
+/* 1st animation */
+@keyframes slideDown {
+  0% {
+      transform: translateY(-100%) translateX(-100%) rotate(0deg);
+      opacity: 1;
+  }
+  50% {
+    transform: translateY(10%) translateX(5%) rotate(380deg);
+    opacity: 1;
+  }
+  100% {
+      transform: translateY(0%) translateX(0%) rotate(360deg);
+      opacity: 1;
+  }
+}
+/* 2nd animation */
+@keyframes slideRight {
+  0% {
+      transform: translateY(-100%) translateX(200%) rotate(-360deg);
+      opacity: 0;
+  }
+  50% {
+    transform: translateY(10%) translateX(0%) rotate(20deg);
+    opacity: 1;
+}
+  100% {
+      transform: translateY(0%) translateX(0%) rotate(0deg);
+      opacity: 1;
+  }
+}
+/* 3rd animation */
+@keyframes slideUp {
+  0% {
+      transform: rotate(-180deg) scale(1.4);
+      opacity: 1;
+  }
+  50% {
+    transform: rotate(10deg) scale(.8);
+  }
+  80% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  100% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+  }
+}
+
+/* title animation */
+@keyframes slideDownfromLeft {
+  0% {
+      transform: translateY(-100%) translateX(-100%) scale(.8);
+      opacity: 1;
+  }
+  40% {
+      transform: translateY(5%) translateX(5%) scale(1);
+  }
+  100% {
+      transform: translateY(0%) translateX(0%) scale(1);
+      opacity: 1;
+  }
+}

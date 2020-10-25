@@ -1,0 +1,308 @@
+@import '../../styles/custom-media.css';
+/* @import '../../styles/custom-properties.css'; */
+@import '../../styles/typography.module.css';
+
+.footer {
+  padding: 1rem;
+  @media (--media-min-medium) {
+    padding: 1.5rem;
+  }
+  @media (--media-min-large) {
+    padding: 2rem;
+  }
+  @media (--media-min-xxlarge) {
+    padding: 2rem;
+  }
+  @media (--media-min-xxlarge2) {
+    padding: 2rem 0;
+  }
+  background-color: #f1f1f1;
+  color: #383838;
+  @nest & a {
+    color: #383838;
+    transition: all .15s;
+    text-decoration: none;
+
+    @nest &:hover {
+      text-decoration: none;
+      color: #000;
+      transition: all .2s;
+    }
+  }
+  @nest & p a {
+    margin: 0;
+    color: initial;
+    display: inline;
+    padding: 0;
+    transition: all .15s;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: inset 0 -3px 0 #008abd;
+    position: relative;
+    @nest &:hover {
+      box-shadow: inset 0 -8px 0 0 #008abd;
+      transition: all .2s;
+    }
+  }
+  @nest & span a {
+    margin: 0;
+    color: initial;
+    display: inline;
+    padding: 0;
+    transition: all .15s;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: inset 0 -3px 0 #008abd;
+    position: relative;
+    @nest &:hover {
+      box-shadow: inset 0 -8px 0 0 #008abd;
+      transition: all .2s;
+    }
+  }
+  @nest & h3 {
+    margin: 0;
+    font-family: Merriweather, sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    @media (--media-min-large) {
+      font-size: 1.4rem;
+    }
+    @media (--media-min-xxlarge) {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+.footerBottom {
+  padding: .8rem;
+  @media (--media-min-medium) {
+    padding: 1rem;
+  }
+  @media (--media-min-large) {
+    padding: .9rem;
+  }
+  background-color: #1a1a1a;
+  color: #fff;
+  @nest & a {
+    color: #fff;
+    transition: all .15s;
+    text-decoration: none;
+
+    @nest &:hover {
+      text-decoration: none;
+      color: #fff;
+      transition: all .2s;
+    }
+  }
+  @nest & p a {
+    margin: 0;
+    color: initial;
+    display: inline;
+    padding: 0;
+    transition: all .15s;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 #00aeef;
+    position: relative;
+    @nest &:hover {
+      box-shadow: inset 0 -3px 0 0 #00aeef;
+      transition: all .2s;
+    }
+  }
+  @nest & span a {
+    color:#fff;
+    margin: 0;
+    color: initial;
+    display: inline;
+    padding: 0;
+    transition: all .15s;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 #00aeef;
+    position: relative;
+    @nest &:hover {
+      box-shadow: inset 0 -3px 0 0 #00aeef;
+      transition: all .2s;
+    }
+  }
+  @nest & h3 {
+    margin: 0;
+    font-family: Merriweather, sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    @media (--media-min-large) {
+      font-size: 1.4rem;
+    }
+    @media (--media-min-xxlarge) {
+      font-size: 2rem;
+    }
+  }
+}
+/*  Bottom Footer */
+.footerBottomWrapper {
+  font-size: var(--font-small-size);
+  padding: 0;
+  @media (--media-min-large) {
+    padding: 0;
+  }
+  @nest & span a {
+    color: #fff;
+  }
+}
+
+.footerWrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footerTopWrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 40px;
+  @media (--media-min-medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+  }
+  @media (--media-min-xlarge) {
+    grid-gap: 40px;
+  }
+}
+
+/* Footer Logos */
+.footerLogos {
+  margin: 0;
+  padding: 0;
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px; */
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @nest & li {
+    display: block;
+    margin: 0 20px 20px 0;
+    @nest & a {
+      display: block;
+      width: 50px;
+    }
+    @nest & img {
+      width: 50px;
+      display: block;
+      transition: all .15s;
+    }
+    @nest & a:hover {
+      transform: scale(1.2);
+      transition: all .2s;
+    }
+  }
+}
+
+/* Top Footer First */
+.footerTopFirst {
+  order: 3;
+  @media (--media-min-large) {
+    order: 1;
+  }
+  @nest & p {
+    font-size: var(--font-base-size);
+    font-family: Merriweather, sans-serif;
+    line-height: 1.6;
+  }
+}
+
+/* Nav */
+.footerTopSecond {
+  order: 2;
+  @media (--media-min-large) {
+    order: 2;
+  }
+  @nest & ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    @media (--media-min-large) {
+      margin: 15px 0 0 0;
+    }
+    @media (--media-min-xxlarge) {
+      display: flex;
+      flex-flow: wrap column;
+      max-height: 150px;
+    }
+    @nest & li {
+      display: block;
+      margin-bottom: 10px;
+
+      @media (--media-min-large) {
+        margin-bottom: 15px;
+      }
+      @nest & a {
+        color: #383838;
+        font-size: var(--font-medium-size);
+        padding-left: 10px;
+        position: relative;
+
+        @nest &:hover:before {
+          left: 3px;
+          transition: all .2s;
+          background: #000;
+        }
+        @nest &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 5px;
+          height: 1px;
+          background: #383838;
+          transition: all .15s;
+        }
+      }
+    }
+  }
+}
+
+/* Top Third Address */
+.footerTopThird {
+  order: 1;
+  @media (--media-min-large) {
+    order: 3;
+  }
+  @nest & p {
+    font-size: var(--font-base-size);
+  }
+  @nest & .addressWrapper {
+
+    @media (--media-min-medium) {
+      display: flex;
+      margin: 10px 0 0 0;
+      @nest &> div {
+        width: 50%;
+      }
+      @nest &> div:first-child {
+        margin-right: 20px;
+      }
+    }
+    @media (--media-min-large) {
+      flex-direction: column;
+      @nest &> div {
+        width: 100%;
+      }
+    }
+    @media (--media-min-xxlarge) {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0 0 0;
+      @nest &> div {
+        width: 50%;
+      }
+      @nest &> div:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+

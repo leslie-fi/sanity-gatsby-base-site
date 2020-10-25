@@ -1,0 +1,43 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import '../styles/typography.module.css';
+
+h1.pageTitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  @nest & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    color: #4d4d4f;
+    font-weight: bold;
+    font-size: 1rem;
+    @nest & a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1e8ced;
+      font-weight: bold;
+    }
+    @nest &.prev {
+      width: auto;
+    }
+    @nest &.next {
+      width: auto;
+    }
+  }
+}

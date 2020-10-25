@@ -1,0 +1,57 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+@import '../../styles/typography.module.css';
+
+.alertBarWrapper {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+}
+.alertBarInnerWrapper {
+  padding: 10px 20px 5px 20px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  @media (--media-min-medium) {
+    align-items: flex-start;
+  }
+  @nest & a {
+    color: inherit;
+  }
+}
+a.alertBarClose {
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s ease;
+  margin-bottom: 1rem;
+  display: block;
+  box-shadow: none !important;
+  @nest & svg {
+    display: block;
+  }
+  @nest &:hover {
+    transition: all 0.3s ease;
+  }
+  @nest & svg path {
+    transition: all 0.3s ease;
+    fill: #000000;
+  }
+  @nest &:hover svg path {
+    transition: all 0.3s ease;
+    fill: #000000;
+  }
+}
+.alertBarCloseWrapper {
+  margin: 10px 0 0 10px;
+  @media (--media-min-medium) {
+    margin: 20px 0 0 20px;
+  }
+}

@@ -1,0 +1,55 @@
+import {graphql, StaticQuery} from 'gatsby'
+import React, {useState} from 'react'
+import Layout from '../components/Layout/Layout'
+import AlertBar from '../components/AlertBar/index'
+import '../styles/layout.css'
+
+const query = graphql`
+  query SiteTitleQuery {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+      title
+    }
+    alert: sanitySiteSettings {
+      _rawAlert
+    }
+  }
+`
+
+function LayoutContainer (props) {
+  const [showNav, setShowNav] = useState(false)
+  function handleShowNav () {
+    setShowNav(true)
+  }
+  function handleHideNav () {
+    setShowNav(false)
+  }
+  return (
+    <>
+
+      <StaticQuery
+        query={query}
+        render={data => {
+          if (!data.site) {
+            throw new Error(
+              'Missing "Site settings". Open the Studio at http://localhost:3333 and some content in "Site settings"'
+            )
+          }
+          return (
+            <>
+              {data.alert && data.alert_rawAlert && (<AlertBar key={`alert`} />)}
+              <Layout
+                {...props}
+                showNav={showNav}
+                siteTitle={data.site.title}
+                onHideNav={handleHideNav}
+                onShowNav={handleShowNav}
+              />
+            </>
+          )
+        }}
+      />
+    </>
+  )
+}
+
+export default LayoutContainer

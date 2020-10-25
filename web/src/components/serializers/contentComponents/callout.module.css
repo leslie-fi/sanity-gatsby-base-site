@@ -1,0 +1,51 @@
+@import '../../../styles/custom-media.css';
+@import '../../../styles/custom-properties.css';
+@import '../../../styles/typography.module.css';
+
+.callout__wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.layout__stack {
+  flex-direction: column;
+}
+.layout__column {
+  flex-direction: row;
+}
+
+.callout__content {
+  order: 2;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+}
+
+h3.callout__title {
+  /* color: #383838; */
+  color: inherit;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  font-family: Merriweather,sans-serif;
+  font-weight: 900;
+  @media (--media-min-xxlarge) {
+    font-size: 1.8rem;
+  }
+}
+
+.callout__description {
+  margin: 0 0 .5rem 0;
+  @nest & p {
+    line-height: 1.6em;
+    color: inherit;
+  }
+  /* max-width: 455px; */
+}
+
+.callout__image {
+  max-width: 150px;
+  order: 1;
+  margin: 0 0 .5rem 0;
+}
+

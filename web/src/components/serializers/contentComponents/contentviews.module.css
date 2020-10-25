@@ -1,0 +1,24 @@
+@import '../../../styles/custom-media.css';
+@import '../../../styles/custom-properties.css';
+@import '../../../styles/typography.module.css';
+
+
+.contentviews__wrapper {
+  width: 100%;
+  margin: 1rem 0;
+  @media (--media-min-medium) {
+    margin: 2rem 0;
+  }
+}
+
+/* .layout__left {
+  text-align: left;
+}
+
+.layout__center {
+  text-align: center;
+  @nest & .sectionheading__subtitle {
+    margin: .5rem auto 0 auto;
+    max-width: 720px;
+  }
+} */

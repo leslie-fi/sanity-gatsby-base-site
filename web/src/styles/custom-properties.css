@@ -1,0 +1,75 @@
+:root {
+  --font-family-sans-serif: 'Open Sans', sans-serif;
+  --font-family-sans-serif-header: 'Open Sans', sans-serif;
+  --font-family-sans: 'Open Sans', sans;
+  --font-family-sans-header: 'Open Sans', sans;
+
+  --color-black: #202123;
+  --color-dark-gray: #32373e;
+  --color-gray: #697a90;
+  --color-light-gray: #b4bcc7;
+  --color-very-light-gray: #e7ebed;
+  --color-white: #fff;
+  --color-accent-light: #ff942d;
+  --color-accent-dark: #562a59;
+
+  /*
+  Green #86b209
+  Blue #00aeef
+  Dark Gray #4d4d4f (body text)
+  Light Gray #dddfe1 OR #ebebeb
+  Pink #ed197b
+  */
+
+
+  /* Typography */
+  /* --unit: 18; */
+  --lh: initial;
+  --font-micro-size: 10px; /* .75rem */
+  --font-micro-line-height: var(--lh);
+
+  --font-xsmall-size: 12px; /* .88rem */
+  --font-xsmall-line-height: var(--lh);
+
+  --font-small-size: 14px; /* 1rem */
+  --font-small-line-height: var(--lh);
+
+  --font-base-size: 16px; /*  1rem */
+  --font-base-line-height: var(--lh);
+
+  --font-medium-size: 18px; /*  1rem */
+  --font-medium-line-height: var(--lh);
+
+  --font-xmedium-size: 19px; /*  1rem */
+  --font-xmedium-line-height: var(--lh);
+
+  --font-large-size: 22px; /* 1.5rem */
+  --font-large-line-height: var(--lh);
+
+  --font-xlarge-size: 30px; /* 2rem  */
+  --font-xlarge-line-height: var(--lh);
+
+  --font-xxlarge-size: 40px; /* 2.63rem */
+  --font-xxlarge-line-height: var(--lh);
+
+  --font-xxxlarge-size: 54px; /*3.25rem*/
+  --font-xxxlarge-line-height: var(--lh);
+
+
+
+  --font-title4-size: calc(20 / var(--unit) * 1rem); /* 20px */
+  --font-title4-line-height: calc(28 / 20); /* 29px */
+  --font-title3-size: calc(22 / var(--unit) * 1rem); /* 22px */
+  --font-title3-line-height: calc(30 / 22); /* 30px */
+  --font-title2-size: calc(24 / var(--unit) * 1rem); /* 24px */
+  --font-title2-line-height: calc(33 / 24); /* 33px */
+  --font-title1-size: calc(49 / var(--unit) * 1rem); /* 49px */
+  --font-title1-line-height: calc(57 / 49); /* 57px */
+
+  --font-mobilesupertitle-size: calc(58 / var(--unit) * 1rem); /* 100px */
+  --font-mobilesupertitle-line-height: calc(80 / 100); /* 110px */
+
+  --font-supertitle-size: calc(100 / var(--unit) * 1rem); /* 100px */
+  --font-supertitle-line-height: calc(105 / 100); /* 110px */
+
+}

@@ -1,0 +1,101 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+@import '../../styles/typography.module.css';
+
+.LightboxContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  @media (--media-min-large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+  @media (--media-min-xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+}
+.LightboxSingleContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0;
+}
+
+.PreviewButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: 0;
+  /* @nest &:focus {
+    border: 1px solid #268DDA;
+    @nest & > div {
+      position: relative;
+    }
+    @nest & > div:after {
+      background: rgba(38, 141, 218, .6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: '';
+    }
+  } */
+}
+.LightboxContent {
+  width: 90vw;
+  box-shadow: 0px 10px 50px hsla(0, 0%, 0%, 0.33);
+  padding: 10px 10px 5px 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (--media-min-medium) {
+    width: 60vw;
+  }
+  @media (--media-min-large) {
+    width: 50vw;
+    padding: 40px 40px 20px 40px;
+  }
+}
+.LightboxNext, .LightboxPrev, .LightboxClose {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  outline: 0;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s ease;
+  @nest &:hover {
+    transition: all 0.3s ease;
+    color: #268DDA;
+  }
+  @nest &:hover svg path {
+    transition: all 0.3s ease;
+    fill: #268DDA;
+  }
+}
+.LightboxNext, .LightboxPrev {
+  margin: 0 0 0 20px;
+}
+.LightboxControls {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.LightboxLeftRight {
+  /* @nest & button:first-child {
+    margin-right: 10px;
+  } */
+}
